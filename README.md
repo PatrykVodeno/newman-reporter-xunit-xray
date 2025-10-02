@@ -1,4 +1,4 @@
-# newman-reporter-xunit
+# newman-reporter-xunit-xray
 JUnit reporter for [Newman](https://github.com/postmanlabs/newman) that provides the information about the collection run in JUnit format.
 This needs to be used in [conjunction with Newman](https://github.com/postmanlabs/newman#external-reporters) so that it can recognize JUnit reporting options.
 
@@ -33,10 +33,10 @@ newman run https://www.getpostman.com/collections/631643-f695cab7-6878-eb55-7943
 
 ### Full
 
-In order to enable this reporter, specify `xunit` in Newman's `-r` or `--reporters` option.
+In order to enable this reporter, specify `xunit-xray` in Newman's `-r` or `--reporters` option.
 
 ```console
-newman run https://www.getpostman.com/collections/631643-f695cab7-6878-eb55-7943-ad88e1ccfd65-JsLv -r xunit --reporter-xunit-export './examples/full/result.xml' -n 2
+newman run https://www.getpostman.com/collections/631643-f695cab7-6878-eb55-7943-ad88e1ccfd65-JsLv -r xunit-xray --reporter-xunit-xray-export './examples/full/result.xml' -n 2
 ```
 
 ### Change request named
@@ -68,10 +68,10 @@ pm.globals.set("__name__" + pm.info.iteration, <new name>)
 
 | CLI Option  | Description       |
 |-------------|-------------------|
-| `--reporter-xunit-export <path>` | Specify a path where the output XML file will be written to disk. If not specified, the file will be written to `newman/` in the current working directory. |
-| `--reporter-xunit-hideSensitiveData` | Ask reporter to remove any property containing 'user', 'password', 'token', 'usr', 'pwd', 'passwd' so that these data do not leak through report |
-| `--reporter-xunit-excludeRequest <req1>,<req2>` | Exlude the named requests from report |
-| `--reporter-xunit-aggregate` | Include failure and error count totals at the root testsuites node |
+| `--reporter-xunit-xray-export <path>` | Specify a path where the output XML file will be written to disk. If not specified, the file will be written to `newman/` in the current working directory. |
+| `--reporter-xunit-xray-hideSensitiveData` | Ask reporter to remove any property containing 'user', 'password', 'token', 'usr', 'pwd', 'passwd' so that these data do not leak through report |
+| `--reporter-xunit-xray-excludeRequest <req1>,<req2>` | Exlude the named requests from report |
+| `--reporter-xunit-xray-aggregate` | Include failure and error count totals at the root testsuites node |
 
 #### With Newman as a Library
 The CLI functionality is available for programmatic use as well.
@@ -81,9 +81,9 @@ const newman = require('newman');
 
 newman.run({
     collection: require('https://www.getpostman.com/collections/631643-f695cab7-6878-eb55-7943-ad88e1ccfd65-JsLv'), // can also provide a URL or path to a local JSON file.
-    reporters: 'xunit',
+    reporters: 'xunit-xray',
     reporter: {
-        xunit: {
+        'xunit-xray': {
             export: './examples/full/result.xml', // If not specified, the file will be written to `newman/` in the current working directory.
         }
     },
@@ -96,7 +96,7 @@ newman.run({
 
 ## Compatibility
 
-| **newman-reporter-xunit** | **newman** | **node** |
+| **newman-reporter-xunit-xray** | **newman** | **node** |
 |:-------------------------:|:----------:|:--------:|
 |            v1.0.0         | >= v4.0.0  | >= v6.x  |
 
@@ -108,7 +108,7 @@ The reporter and newman must be installed at the same level, the installation sh
 ### Getting different JUnit output
 You are most probably getting in-built reporter output used in older versions of newman, Please check the newman's [compatibility](#compatibility) section above.
 
-> If you are facing any other problem, please check the open [issues](https://github.com/martijnvandervlag/newman-reporter-xunit/issues) or create new.
+> If you are facing any other problem, please check the open issues or create a new one.
 
 ## Community Support
 

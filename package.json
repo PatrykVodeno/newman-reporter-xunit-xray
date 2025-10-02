@@ -1,6 +1,6 @@
 {
   "name": "newman-reporter-xunit-xray",
-  "version": "2.4.5",
+  "version": "2.4.7",
   "description": "A Newman JUnit Reporter providing full reports (without aggregation of results) based on newman-reporter-junitfull package",
   "main": "index.js",
   "bundleDependencies": false,
@@ -29,7 +29,7 @@
   },
   "preferGlobal": true,
   "bugs": {
-    "url": "https://github.com/bhecquet/newman-reporter-xjunit-xray/issues"
+    "url": "https://github.com/PatrykVodeno/newman-reporter-xunit-xray/issues"
   },
   "repository": {
     "type": "git",
