@@ -1,6 +1,6 @@
 {
-  "name": "newman-reporter-xunit",
-  "version": "2.4.4",
+  "name": "newman-reporter-xunit-xray",
+  "version": "2.4.5",
   "description": "A Newman JUnit Reporter providing full reports (without aggregation of results) based on newman-reporter-junitfull package",
   "main": "index.js",
   "bundleDependencies": false,
@@ -10,15 +10,15 @@
     "xmlbuilder": "^10.0.0"
   },
   "deprecated": false,
-  "homepage": "https://github.com/bhecquet/newman-reporter-xjunit",
+  "homepage": "https://github.com/bhecquet/newman-reporter-xjunit-xray",
   "keywords": [
     "newman",
     "reporter",
     "junit"
   ],
   "author": {
-    "name": "Bertrand Hecquet",
-    "email": "bhecquet.tech@free.fr"
+    "name": "Patryk Nowek",
+    "email": "patryk.nowek@gmail.com"
   },
   "license": "Apache-2.0",
   "engines": {
@@ -29,10 +29,10 @@
   },
   "preferGlobal": true,
   "bugs": {
-    "url": "https://github.com/bhecquet/newman-reporter-xjunit/issues"
+    "url": "https://github.com/bhecquet/newman-reporter-xjunit-xray/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/bhecquet/newman-reporter-xunit.git"
+    "url": "https://github.com/PatrykVodeno/newman-reporter-xunit-xray"
   }
 }
