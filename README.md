@@ -12,7 +12,7 @@ This is based on [newman-reporter-junitfull] (https://github.com/martijnvandervl
 > The installation should be global if newman is installed globally, local otherwise. (Replace -g from the command below with -S for a local installation)
 
 ```console
-$ npm install -g newman-reporter-xunit
+$ npm install -g newman-reporter-xunit-xray
 ```
 
 ## Usage
